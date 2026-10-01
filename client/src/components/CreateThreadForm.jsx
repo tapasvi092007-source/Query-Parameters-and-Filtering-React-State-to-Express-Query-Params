@@ -42,3 +42,4 @@ export default function CreateThreadForm() {
     </form>
   );
 }
+//create thread form is created completely newly.
