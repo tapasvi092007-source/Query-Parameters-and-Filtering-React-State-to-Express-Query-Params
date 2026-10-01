@@ -1,13 +1,16 @@
 import ThreadList from "./components/ThreadList.jsx";
+import CreateThreadForm from "./components/CreateThreadForm.jsx";
 
-// App is already wired. It renders <ThreadList />.
-// Your work happens in ThreadList.jsx (state → queryKey → params)
-// and threads.service.js (accept + forward the filters).
 export default function App() {
   return (
     <div className="wrap">
       <h1>Threadbase</h1>
       <p className="muted">Search &amp; sort — wire the UI to the query.</p>
+
+      {/* 🔹 New thread form */}
+      <CreateThreadForm />
+
+      {/* 🔹 Thread list */}
       <ThreadList />
     </div>
   );

@@ -19,8 +19,14 @@
 // ─────────────────────────────────────────────────────────────
 import apiClient from "./apiClient";
 
+// 🔹 Read threads (already done in your previous assignment)
 export async function getThreads(filters) {
-  // TODO: accept `filters` and pass it as { params: filters }
-  const response = await apiClient.get("/api/threads",{ params: filters });
+  const response = await apiClient.get("/api/threads", { params: filters });
+  return response.data;
+}
+
+// 🔹 Create a new thread (needed for mutation assignment)
+export async function createThread({ title, body }) {
+  const response = await apiClient.post("/api/threads", { title, body });
   return response.data;
 }
